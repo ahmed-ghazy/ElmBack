@@ -34,16 +34,12 @@ app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();
+app.UseDefaultFiles();
 app.UseStaticFiles();
-
-app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors();
-
 app.UseAuthorization();
-
 app.UseMiddleware<GlobalExceptionHandler>();
-
 app.Services.MigrateDatabase();
 
 app.MapControllers();
